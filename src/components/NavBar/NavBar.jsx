@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 export default class NavBar extends Component {
     render() {
         return (
-            <div className="nav">
+            <div className="nav" data-test="nav">
               
                    <ul  className="nav-bar">
                        <li className="nav-bar__item"><Link to='/' className="nav-bar__item__link"  >Home</Link></li>

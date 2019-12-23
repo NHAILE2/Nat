@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-  import Plot from 'react-plotly.js';
+import React, { Component } from 'react';
+import Plot from 'react-plotly.js';
 
 export default class Stock extends Component {
     constructor(props){

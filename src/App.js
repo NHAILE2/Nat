@@ -1,8 +1,8 @@
 import React from 'react';
  import './stylesheets/utils/main.scss'
  import Home from './components/Home'
- import Navbar from './components/NavBar'
- import About from './components/About'
+ import Navbar from './components/NavBar/NavBar'
+ import About from './components/About/About'
  import Contact from './components/Contact'
  import SignIn from './components/SignIn'
  import SignUp from './components/SignUp'

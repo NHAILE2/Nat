@@ -23,9 +23,10 @@ th {
   background: rgb(224, 221, 221);
   width: 100%;
   display: flex;
-
+  padding-top: 100px;
   &__table1 {
     width: 60%;
+    
   }
   &__table2 {
     width: 40%;
