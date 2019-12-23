@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getData } from "../../Action";
-import TableRow from "../TableRow";
+import TableRow from "../TableRow/TableRow";
 import PropTypes from 'prop-types'
 class About extends Component {
     state={

@@ -9,7 +9,7 @@ const setUp=(props={})=>{
 
 
 
-describe("your test suite", () => {
+describe(" NavBar component", () => {
     let component ;
     beforeEach(()=>{
         component=setUp();
