@@ -1,0 +1,32 @@
+.login {
+  margin: 10%;
+
+  width: 60vw;
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  .nameError,
+  .passworderror {
+    border: 1px solid red;
+  }
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  button {
+    margin-top: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

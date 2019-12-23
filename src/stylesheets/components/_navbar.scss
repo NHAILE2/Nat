@@ -1,0 +1,54 @@
+@mixin transition {
+  color: rgb(50, 140, 182);
+  transition: all 0.5s ease-in-out;
+}
+
+.nav {
+  background: #272727;
+  margin: 0;
+  padding: 0;
+  
+}
+.nav-bar {
+  
+  display: block;
+  padding: 2rem;
+  margin-left: 3rem;
+
+  &__item {
+    display: inline;
+    padding: 1.5rem 5rem;
+
+    list-style: none;
+
+    &__link {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        @include transition;
+      }
+    }
+  }
+
+  &__log {
+    position: absolute;
+    display: inline;
+    list-style: none;
+    align-items: center;
+    right: 0;
+    top: 0;
+    padding: 2rem;
+    &__item {
+      display: inline;
+      list-style: none;
+      &__link {
+        text-decoration: none;
+        padding: 1rem;
+        color: white;
+        &:hover {
+          @include transition;
+        }
+      }
+    }
+  }
+}
