@@ -1,9 +1,13 @@
 .login {
-  margin: 10%;
-
-  width: 60vw;
-
+   
+//width: 100%;
+  //  margin: 0%;
+  // &__page{
+    
+     width: 60vw;
+     margin: 20vh;
   input {
+
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;

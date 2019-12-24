@@ -12,8 +12,7 @@ export default class Stock extends Component {
     }
 componentDidMount(){
        this.fetchStock();
-      
-       console.log("hello");
+     
        
     }     
 fetchStock=()=>{

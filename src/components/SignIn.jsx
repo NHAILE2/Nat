@@ -52,7 +52,7 @@ console.log(errorCheckPassword);
             <div className="login">
                 <form onSubmit={this.handleSubmit} >
                     <label >User Name</label>
-                    <input type="text" placeholder="name.." name="userName" value={data.userName} onChange={this.handleChange} className={errorCheckName}/>
+                    <input type="text" placeholder="name..." name="userName" value={data.userName} onChange={this.handleChange} className={errorCheckName}/>
                    
                     <br/>
                     <label >Password</label>
