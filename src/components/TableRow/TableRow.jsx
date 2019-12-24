@@ -15,6 +15,6 @@ export default function TableRow({item,handleTableClick}) {
     )
 }
 TableRow.propTypes={
-    item:PropTypes.object.isRequired,
+    item:PropTypes.object,
     handleTableClick:PropTypes.func
 }
