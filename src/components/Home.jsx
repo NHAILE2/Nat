@@ -1,15 +1,13 @@
 import React, { Component } from "react";
- import Stock from './Stock';
+import Stock from "./Stock";
 const API_KEY = "5c54bd1abf225c0ceb22578843b1ad30";
 
 //http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}
 
-
-function kelvinToFahrenheit (temp) {
-    return Math.round((temp- 273.15) * 9/5 + 32)
+function kelvinToFahrenheit(temp) {
+  return Math.round(((temp - 273.15) * 9) / 5 + 32);
 }
-console.log(kelvinToFahrenheit (277));
-
+console.log(kelvinToFahrenheit(277));
 
 export default class Home extends Component {
   constructor(props) {
@@ -18,8 +16,8 @@ export default class Home extends Component {
       temp_min: [],
       temp_max: [],
       temp: [],
-      country:'',
-      city:''
+      country: "",
+      city: ""
     };
   }
   componentDidMount() {
@@ -36,20 +34,16 @@ export default class Home extends Component {
       );
   }
 
-  handleChange=(e)=>{
-    
+  handleChange = e => {
     this.setState({
-  [e.target.name]:e.target.value
- });
- console.log(this.state.country);
- console.log(parseInt('123XYZ'));
- 
- 
-}
-
+      [e.target.name]: e.target.value
+    });
+    console.log(this.state.country);
+    console.log(parseInt("123XYZ"));
+  };
 
   render() {
-    const { temp_min, temp_max, temp,city,country } = this.state;
+    const { temp_min, temp_max, temp, city, country } = this.state;
     return (
       <div className="wrapper">
         <div className="home">
@@ -69,14 +63,29 @@ export default class Home extends Component {
           <div>
             <h1>Weather</h1>
             <form>
-                <input type="text" className="wrapper__home__weather" placeholder="Country..." name="country" value={country} onChange={this.handleChange}/>
-                <input type="text" className="wrapper__home__weather" placeholder="City..." name="city" value={city} onChange={this.handleChange}/>
-                <input type="submit" value="Get Temperature "/>
+              <input
+                type="text"
+                className="wrapper__home__weather"
+                placeholder="Country..."
+                name="country"
+                value={country}
+                onChange={this.handleChange}
+              />
+              <input
+                type="text"
+                className="wrapper__home__weather"
+                placeholder="City..."
+                name="city"
+                value={city}
+                onChange={this.handleChange}
+              />
+              <input type="submit" value="Get Temperature " />
             </form>
 
-
-            <h2>{`Min ${kelvinToFahrenheit (temp_min)} Max ${kelvinToFahrenheit (temp_max)}`}</h2>
-            <h2>{`Temp ${kelvinToFahrenheit (temp)}`}</h2>
+            <h2>{`Min ${kelvinToFahrenheit(temp_min)} Max ${kelvinToFahrenheit(
+              temp_max
+            )}`}</h2>
+            <h2>{`Temp ${kelvinToFahrenheit(temp)}`}</h2>
           </div>
           <div>
             <h3>Titel</h3>
@@ -100,7 +109,7 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <Stock/>
+        <Stock />
       </div>
     );
   }
