@@ -4,10 +4,12 @@ import { getData } from "../../Action";
 import TableRow from "../TableRow/TableRow";
 import PropTypes from "prop-types";
 import Button from "../Button";
+import Search from '../Search'
 class About extends Component {
   state = {
     selectedItem: [],
-    sorted: false
+    sorted: false,
+    searchItem:''
   };
 
   UNSAFE_componentWillMount() {
@@ -29,8 +31,15 @@ class About extends Component {
   handelOrder = () => {
     this.setState({ sorted: !this.state.sorted });
   };
-
+  onTextChange=(e)=>{
+   
+    this.setState({
+      searchItem:e
+    })
+  }
   render() {
+    console.log('searcht',this.state.searchItem);
+    
     console.log("handle order: ", this.state.sorted);
     const order = this.sortData(this.props.posts);
     // const posts=this.props.posts
@@ -44,8 +53,12 @@ class About extends Component {
       <div className="about">
         <div className="about__table1">
           <h1>Table</h1>
-          <Button buttonText={buttonTitle} handelOrder={this.handelOrder} />
-
+          <Button buttonText={buttonTitle} handelOrder={this.handelOrder} /><br/>
+          <div style={{marginLeft:'20px'}}>
+            <p>search</p>
+              <Search onTextChange={this.onTextChange} />
+          </div>
+        
           <table>
             <thead>
               <tr>
@@ -55,7 +68,11 @@ class About extends Component {
               </tr>
             </thead>
             <tbody>
-              {posts.map(item => {
+              {posts.filter(serchitem=>
+             // console.log(serchitem.title)
+              
+               serchitem.title.includes(this.state.searchItem)
+              ).map(item => {
                 return (
                   <TableRow
                     item={item}
